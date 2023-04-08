@@ -1,0 +1,13 @@
+[package]
+name = "xml2"
+categories = ["api-bindings", "encoding"]
+
+authors.workspace = true
+version.workspace = true
+keywords.workspace = true
+license.workspace = true
+rust-version.workspace = true
+edition.workspace = true
+
+[dependencies]
+xml2-sys = { path = "../xml2-sys" }

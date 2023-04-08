@@ -1,0 +1,17 @@
+[package]
+name = "xml2-src"
+include = [
+    "src/**",
+    "vendor/libxml2-*/**",
+]
+
+authors.workspace = true
+version.workspace = true
+keywords.workspace = true
+license.workspace = true
+rust-version.workspace = true
+edition.workspace = true
+
+[dependencies]
+cc = "1.0.79"
+dunce = "1.0.3"

@@ -1,0 +1,6 @@
+/target
+/Cargo.lock
+xml2-src/vendor/*
+
+!xml2-src/vendor/prepare.sh
+!xml2-src/vendor/BUILD.md

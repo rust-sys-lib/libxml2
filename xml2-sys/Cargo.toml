@@ -1,0 +1,24 @@
+[package]
+name = "xml2-sys"
+links = "xml2"
+categories = ["external-ffi-bindings", "encoding"]
+
+authors.workspace = true
+version.workspace = true
+keywords.workspace = true
+license.workspace = true
+rust-version.workspace = true
+edition.workspace = true
+
+[features]
+default = []
+static = ["xml2-src"]
+bindings = []
+
+[dependencies]
+libc = "0.2.141"
+
+[build-dependencies]
+bindgen = "0.64.0"
+pkg-config = "0.3.26"
+xml2-src = { path = "../xml2-src", optional = true }

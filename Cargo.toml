@@ -1,0 +1,12 @@
+[workspace]
+
+members = ["xml2-src", "xml2-sys"]
+
+[workspace.package]
+authors = ["Alexander Korolev <alexander.korolev.germany@gmail.com>"]
+version = "2.10.3-alpha"
+
+keywords = ["xml", "xml2", "ffi"]
+license = "MIT"
+rust-version = "1.67"
+edition = "2021"
