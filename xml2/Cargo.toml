@@ -11,4 +11,4 @@ edition.workspace = true
 description.workspace = true
 
 [dependencies]
-xml2-sys = { path = "../xml2-sys" }
+xml2-sys = "2.10.3-alpha"

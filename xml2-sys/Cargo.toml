@@ -22,4 +22,4 @@ libc = "0.2.141"
 [build-dependencies]
 bindgen = "0.64.0"
 pkg-config = "0.3.26"
-xml2-src = { path = "../xml2-src", optional = true }
+xml2-src = { version = "2.10.3-alpha", optional = true }
