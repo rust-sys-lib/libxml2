@@ -10,3 +10,6 @@ keywords = ["xml", "xml2", "ffi"]
 license = "MIT"
 rust-version = "1.67"
 edition = "2021"
+description = """
+Rust bindings for libxml2 GNOME XML parser and toolkit
+"""
