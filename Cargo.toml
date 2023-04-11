@@ -1,6 +1,6 @@
 [workspace]
 
-members = ["xml2-src", "xml2-sys"]
+members = ["xml2", "xml2-src", "xml2-sys"]
 
 [workspace.package]
 authors = ["Alexander Korolev <alexander.korolev.germany@gmail.com>"]
