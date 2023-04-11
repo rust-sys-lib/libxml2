@@ -9,6 +9,7 @@ license.workspace = true
 rust-version.workspace = true
 edition.workspace = true
 description.workspace = true
+repository.workspace = true
 
 [dependencies]
-xml2-sys = { version = "2.10.3-alpha", path = "../xml2-sys" }
+xml2-sys = { workspace = true }

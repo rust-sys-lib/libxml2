@@ -13,3 +13,8 @@ edition = "2021"
 description = """
 Rust bindings for libxml2 GNOME XML parser and toolkit
 """
+repository = "https://github.com/rust-sys-lib/libxml2"
+
+[workspace.dependencies]
+xml2-src = { version = "2.10.3-alpha", path = "xml2-src" }
+xml2-sys = { version = "2.10.3-alpha", path = "xml2-sys" }

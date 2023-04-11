@@ -1,3 +1,4 @@
+#[rustfmt::skip]
 pub const C_FILES: &[&str] = &[
   concat!(env!("CARGO_MANIFEST_DIR"), "/./vendor/libxml2-2.10.3/dict.c"),
   concat!(env!("CARGO_MANIFEST_DIR"), "/./vendor/libxml2-2.10.3/xpath.c"),

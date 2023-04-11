@@ -41,7 +41,7 @@ popd
 
 pushd ..
 
-echo "pub const C_FILES: &[&str] = &[" > VENDOR_C_FILES
+echo -e "#[rustfmt::skip]\npub const C_FILES: &[&str] = &[" > VENDOR_C_FILES
 find ./vendor -name "*.c" -exec echo "  concat!(env!(\"CARGO_MANIFEST_DIR\"), \"/{}\")," \; >> VENDOR_C_FILES
 echo "];" >> VENDOR_C_FILES
 mv VENDOR_C_FILES src/c_files.rs
