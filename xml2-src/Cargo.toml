@@ -2,7 +2,8 @@
 name = "xml2-src"
 include = [
     "src/**",
-    "vendor/libxml2-*/**",
+    "vendor/libxml2-*/**/*.[ch]",
+    "MIT-LICENSE",
 ]
 
 authors.workspace = true

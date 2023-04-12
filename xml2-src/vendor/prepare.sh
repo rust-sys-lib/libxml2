@@ -32,10 +32,10 @@ echo
 echo ${C_FILES}
 echo
 
-find . $(printf "! -name %s " ${C_FILES}) ! -name '*.h' -type f -exec rm {} +
+find . $(printf "! -name %s " ${C_FILES}) ! -name '*.h' ! -name libxml2-api.xml -type f -exec rm {} +
 rm trio*.*
 find . ! -name . ! -name .. -type d -empty -delete
-find . ! -name include -type d -depth 1 -exec rm -rf {} +
+find . ! -name include ! -name doc -type d -depth 1 -exec rm -rf {} +
 
 popd
 
