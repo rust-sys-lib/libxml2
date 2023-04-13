@@ -16,11 +16,12 @@ repository.workspace = true
 default = []
 static = ["xml2-src"]
 bindings = []
+__update = []
 
 [dependencies]
 libc = "0.2.141"
 
 [build-dependencies]
-bindgen = "0.64.0"
+bindgen = "0.65.1"
 pkg-config = "0.3.26"
 xml2-src = { workspace = true, optional = true }

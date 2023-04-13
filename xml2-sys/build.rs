@@ -50,6 +50,7 @@ fn main() {
         bindings
             .write_to_file(output_bindings)
             .expect("Couldn't write bindings!");
+        #[cfg(feature = "__update")]
         bindings
             .write_to_file(crate_path.join("bindings.rs"))
             .expect("Couldn't write bindings!");
