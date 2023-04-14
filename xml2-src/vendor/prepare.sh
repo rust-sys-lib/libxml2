@@ -26,7 +26,7 @@ if [ ! -f Makefile ]; then
     make -n | grep "compile gcc" > ../Makefile.output
 fi
 
-C_FILES=$(awk '/am__libxml2_la_SOURCES_DIST =/,/\.c$/' Makefile | tr '\n' ' ' | sed -E 's/am__libxml2_la_SOURCES_DIST = // ; s/\\//g ; s/[[:space:]]+/ /g ; s/ $//')
+C_FILES=$(awk '/am__libxml2_la_SOURCES_DIST =/,/\.c$/' Makefile | tr '\n' ' ' | sed -E 's/am__libxml2_la_SOURCES_DIST = // ; s/nanoftp.c// ; s/SAX.c// ; s/xzlib.c// ;  s/legacy.c// ; s/\\//g ; s/[[:space:]]+/ /g ; s/ $//')
 
 echo
 echo ${C_FILES}

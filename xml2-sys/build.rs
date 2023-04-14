@@ -11,10 +11,14 @@ fn main() {
     println!("cargo:rerun-if-changed=wrapper.h");
 
     #[cfg(feature = "static")]
-    let include_dirs = vec![xml2_src::build_lib().include];
+    let include_dirs = {
+        println!("cargo:rustc-link-lib=z");
+        vec![xml2_src::build_lib().include]
+    };
 
     #[cfg(not(feature = "static"))]
     let include_dirs: Vec<PathBuf> = {
+        println!("cargo:rustc-link-lib=xml2");
         #[cfg(feature = "bindings")]
         {
             pkg_config::Config::new()
