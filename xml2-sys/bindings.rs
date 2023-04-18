@@ -8160,8 +8160,6 @@ pub struct _xmlCharEncodingHandler {
     pub output: xmlCharEncodingOutputFunc,
     pub iconv_in: iconv_t,
     pub iconv_out: iconv_t,
-    pub uconv_in: *mut _uconv_t,
-    pub uconv_out: *mut _uconv_t,
 }
 #[test]
 fn bindgen_test_layout__xmlCharEncodingHandler() {
@@ -8170,7 +8168,7 @@ fn bindgen_test_layout__xmlCharEncodingHandler() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<_xmlCharEncodingHandler>(),
-        56usize,
+        40usize,
         concat!("Size of: ", stringify!(_xmlCharEncodingHandler))
     );
     assert_eq!(
@@ -8226,26 +8224,6 @@ fn bindgen_test_layout__xmlCharEncodingHandler() {
             stringify!(_xmlCharEncodingHandler),
             "::",
             stringify!(iconv_out)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).uconv_in) as usize - ptr as usize },
-        40usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_xmlCharEncodingHandler),
-            "::",
-            stringify!(uconv_in)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).uconv_out) as usize - ptr as usize },
-        48usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(_xmlCharEncodingHandler),
-            "::",
-            stringify!(uconv_out)
         )
     );
 }
@@ -18251,8 +18229,3 @@ extern "C" {
     ) -> htmlParserCtxtPtr;
 }
 pub type __builtin_va_list = *mut ::std::os::raw::c_char;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _uconv_t {
-    pub _address: u8,
-}
