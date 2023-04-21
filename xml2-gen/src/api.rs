@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-const API_XML: &str = include_str!("../../xml2-src/vendor/libxml2-2.10.3/doc/libxml2-api.xml");
+const API_XML: &str = include_str!("../../xml2-src/vendor/libxml2/doc/libxml2-api.xml");
 
 #[derive(Debug, Deserialize)]
 pub(crate) struct Api {

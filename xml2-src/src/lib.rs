@@ -4,6 +4,8 @@ use std::{
 };
 
 mod c_files;
+mod makefile;
+mod configure;
 
 pub const LIBXML2: &str = "libxml2-2.10.3";
 
