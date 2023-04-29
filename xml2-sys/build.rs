@@ -4,7 +4,7 @@ use std::{
 };
 
 #[cfg(all(not(feature = "static"), feature = "bindings"))]
-const VERSION: &str = "2.10.3";
+const VERSION: &str = "2.10.4";
 
 fn main() {
     println!("cargo:rerun-if-changed=build.rs");
@@ -24,11 +24,25 @@ fn main() {
             pkg_config::Config::new()
                 .atleast_version(VERSION)
                 .probe("libxml-2.0")
-                .unwrap()
+                .expect("libxml-2.0 pkg-config configuration")
                 .include_paths
         }
         #[cfg(not(feature = "bindings"))]
         {
+            if let Some(lib_dir) = std::env::var_os("LIBXML2_PATH") {
+                let lib_dir = Path::new(&lib_dir);
+                let dylib_name = format!(
+                    "{}xml2{}",
+                    std::env::consts::DLL_PREFIX,
+                    std::env::consts::DLL_SUFFIX
+                );
+                if lib_dir.join(dylib_name).exists()
+                    || lib_dir.join("libxml2.a").exists()
+                    || lib_dir.join("xml2.lib").exists()
+                {
+                    println!("cargo:rustc-link-search=native={}", lib_dir.display());
+                }
+            }
             vec![]
         }
     };

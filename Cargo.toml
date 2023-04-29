@@ -4,7 +4,7 @@ members = ["xml2", "xml2-gen", "xml2-src", "xml2-sys"]
 
 [workspace.package]
 authors = ["Alexander Korolev <alexander.korolev.germany@gmail.com>"]
-version = "2.10.3-alpha"
+version = "2.10.4-alpha"
 
 keywords = ["xml", "xml2", "ffi"]
 license = "MIT"
@@ -16,5 +16,8 @@ Rust bindings for libxml2 GNOME XML parser and toolkit
 repository = "https://github.com/rust-sys-lib/libxml2"
 
 [workspace.dependencies]
-xml2-src = { version = "2.10.3-alpha", path = "xml2-src" }
-xml2-sys = { version = "2.10.3-alpha", path = "xml2-sys" }
+xml2-src = { version = "2.10.4-alpha", path = "xml2-src" }
+xml2-sys = { version = "2.10.4-alpha", path = "xml2-sys" }
+
+[workspace.metadata]
+version = "2.10.4"

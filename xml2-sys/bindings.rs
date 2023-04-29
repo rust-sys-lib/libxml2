@@ -1,4 +1,4 @@
-pub const LIBXML_DOTTED_VERSION: &[u8; 7usize] = b"2.10.3\0";
+pub const LIBXML_DOTTED_VERSION: &[u8; 7usize] = b"2.10.4\0";
 pub const LIBXML_VERSION: u32 = 21003;
 pub const LIBXML_VERSION_STRING: &[u8; 6usize] = b"21003\0";
 pub const LIBXML_VERSION_EXTRA: &[u8; 1usize] = b"\0";

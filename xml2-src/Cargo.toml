@@ -6,6 +6,7 @@ include = [
     "!vendor/libxml2/test*.[ch]",
     "!vendor/libxml2/trio*.[ch]",
     "vendor/libxml2/include/libxml/*.h",
+    "vendor/libxml2/include/libxml/xmlversion.h.in",
     "vendor/libxml2/doc/libxml2-api.xml",
     "vendor/libxml2/config.h.cmake.in",
     "vendor/libxml2/configure.ac",
